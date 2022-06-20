@@ -26,15 +26,15 @@ Feature: Use case - Register, login and perform cart operations.
 
   Scenario: TC-002: Registered user can log in with valid credentials
     When Enters valid credentials to sign in
-      | email               | password       |
-      | victomo@hotmail.com | Sixdegrees@E14 |
+      | email | password |
+      |       |          |
     And Clicks the Sign In button
     Then User account page is successfully opened
 
   Scenario Outline: TC-003: Signed In user can choose and add an item to the shopping basket and navigate to checkout
     When User Logs in with valid credentials
-      | email               | password       |
-      | victomo@hotmail.com | Sixdegrees@E14 |
+      | email | password |
+      |       |          |
     And Selects an "<item>" to add to the shopping basket
     And Navigates to the checkout page
     Then Item is successfully added and displayed
@@ -44,8 +44,8 @@ Feature: Use case - Register, login and perform cart operations.
 
   Scenario Outline: TC-004: Signed In user can remove added item from shopping basket
     When User Logs in with valid credentials
-      | email               | password       |
-      | victomo@hotmail.com | Sixdegrees@E14 |
+      | email | password |
+      |       |          |
     And Selects an "<item>" to add to the shopping basket
     And Navigates to the checkout page
     And Deletes added item
@@ -57,8 +57,8 @@ Feature: Use case - Register, login and perform cart operations.
 
   Scenario Outline: TC-005: Signed In user can add another item into shopping basket
     When User Logs in with valid credentials
-      | email               | password       |
-      | victomo@hotmail.com | Sixdegrees@E14 |
+      | email | password |
+      |       |          |
     And Selects an "<item>" to add to the shopping basket
     And Navigates to the checkout page
     And Deletes added item
